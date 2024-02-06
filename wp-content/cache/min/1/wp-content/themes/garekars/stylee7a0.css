@@ -1,0 +1,15 @@
+/*!
+Theme Name: garekars
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: garekars
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+ .navbar-nav>li.dropdown>a{position:relative}.navbar-nav>li.dropdown>a:after{content:'+';display:inline-block;margin-left:4px}body div .dropdown-menu,body div .sub-menu{width:280px!important}body div#navbarSupportedContent,body div#mega-menu-wrap-main{width:100%!important}.garekar-mega-menu a{text-transform:none!important}.mega-menu-toggle{background:none;position:absolute;right:15px;top:45px}#mega-menu-wrap-main{position:inherit!important;z-index:9}body div ol,body div ol li{list-style:decimal!important;list-style-position:inside!important}body section.ig-video img{height:350px!important}body section.ig-video div.img{text-align:center;background:#000}.nav-links .nav-previous{display:inline}.nav-links .nav-next{display:inline;margin-left:20px}.single-post .post-thumbnail .wp-post-image{margin-bottom:20px}.gform_submission_error,.validation_message{color:#000!important}input#gform_submit_button_1:hover{cursor:pointer}.page-id-83 .booking-box *{color:#000!important}.hor-tabs ul li{list-style:circle;list-style-position:inside}.hor-tabs{display:flex;flex-wrap:wrap;max-width:1140px;margin:auto}.hor-tabs label{order:1;display:block;padding:1rem 2rem;margin-right:.2rem;cursor:pointer;background:#aa8453;font-weight:700;transition:background ease 0.2s;color:#fff}.hor-tabs .tab{order:99;flex-grow:1;width:100%;display:none;padding:1rem;background:#fff}.hor-tabs input[type="radio"]{display:none}.hor-tabs input[type="radio"]:checked+label{background:#fff;color:#000}.hor-tabs input[type="radio"]:checked+label+.tab{display:block}@media (max-width:45em){.hor-tabs .tab,.hor-tabs label{order:initial}.hor-tabs label{width:100%;margin-right:0;margin-top:.2rem}}

@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+
+    <script>
+        function submitForm() {
+            // Get form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Create WhatsApp link
+            var url =
+                "https://wa.me/919899261481?text=Name: " +
+                encodeURIComponent(name) +
+                "%0AEmail: " +
+                encodeURIComponent(email) +
+                "%0AMessage: " +
+                encodeURIComponent(message);
+
+            // Open WhatsApp link in a new window
+            window.open(url);
+        }
+    </script>
+
+
+
+
+    <script>
+        var gform; gform || (document.addEventListener("gform_main_scripts_loaded", function () { gform.scriptsLoaded = !0 }), window.addEventListener("DOMContentLoaded", function () { gform.domLoaded = !0 }), gform = { domLoaded: !1, scriptsLoaded: !1, initializeOnLoaded: function (o) { gform.domLoaded && gform.scriptsLoaded ? o() : !gform.domLoaded && gform.scriptsLoaded ? window.addEventListener("DOMContentLoaded", o) : document.addEventListener("gform_main_scripts_loaded", o) }, hooks: { action: {}, filter: {} }, addAction: function (o, n, r, t) { gform.addHook("action", o, n, r, t) }, addFilter: function (o, n, r, t) { gform.addHook("filter", o, n, r, t) }, doAction: function (o) { gform.doHook("action", o, arguments) }, applyFilters: function (o) { return gform.doHook("filter", o, arguments) }, removeAction: function (o, n) { gform.removeHook("action", o, n) }, removeFilter: function (o, n, r) { gform.removeHook("filter", o, n, r) }, addHook: function (o, n, r, t, i) { null == gform.hooks[o][n] && (gform.hooks[o][n] = []); var e = gform.hooks[o][n]; null == i && (i = n + "_" + e.length), gform.hooks[o][n].push({ tag: i, callable: r, priority: t = null == t ? 10 : t }) }, doHook: function (n, o, r) { var t; if (r = Array.prototype.slice.call(r, 1), null != gform.hooks[n][o] && ((o = gform.hooks[n][o]).sort(function (o, n) { return o.priority - n.priority }), o.forEach(function (o) { "function" != typeof (t = o.callable) && (t = window[t]), "action" == n ? t.apply(null, r) : r[0] = t.apply(null, r) })), "filter" == n) return r[0] }, removeHook: function (o, n, t, i) { var r; null != gform.hooks[o][n] && (r = (r = gform.hooks[o][n]).filter(function (o, n, r) { return !!(null != i && i != o.tag || null != t && t != o.priority) }), gform.hooks[o][n] = r) } });
+    </script>
+    <meta charset="UTF-8">
+    <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+    <script>class RocketLazyLoadScripts { constructor(e) { this.triggerEvents = e, this.eventOptions = { passive: !0 }, this.userEventListener = this.triggerListener.bind(this), this.delayedScripts = { normal: [], async: [], defer: [] }, this.allJQueries = [] } _addUserInteractionListener(e) { this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventListener, e.eventOptions))) } _removeUserInteractionListener(e) { this.triggerEvents.forEach((t => window.removeEventListener(t, e.userEventListener, e.eventOptions))) } triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } async _loadEverythingNow() { this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async), await this._triggerDOMContentLoaded(), await this._triggerWindowLoad(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")) } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => { e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) })) } async _transformScript(e) { return await this._requestAnimFrame(), new Promise((t => { const n = document.createElement("script"); let r;[...e.attributes].forEach((e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type", r = e.nodeValue), n.setAttribute(t, e.nodeValue)) })), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t()), e.parentNode.replaceChild(n, e) })) } async _loadScriptsFromList(e) { const t = e.shift(); return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { var e = document.createDocumentFragment();[...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async].forEach((t => { const n = t.getAttribute("src"); if (n) { const t = document.createElement("link"); t.href = n, t.rel = "preload", t.as = "script", e.appendChild(t) } })), document.head.appendChild(e) } _delayEventListeners() { let e = {}; function t(t, n) { !function (t) { function n(n) { return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n } e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(n) } function n(e, t) { let n = e[t]; Object.defineProperty(e, t, { get: () => n || function () { }, set(r) { e["rocket" + t] = n = r } }) } t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t = window.jQuery; Object.defineProperty(window, "jQuery", { get: () => t, set(n) { if (n && n.fn && !e.allJQueries.includes(n)) { n.fn.ready = n.fn.init.prototype.ready = function (t) { e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n))) }; const t = n.fn.on; n.fn.on = n.fn.init.prototype.on = function () { if (this[0] === window) { function e(e) { return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ") } "string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { delete Object.assign(arguments[0], { [e(t)]: arguments[0][t] })[t] })) } return t.apply(this, arguments), this }, e.allJQueries.push(n) } t = n } }) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._requestAnimFrame(), document.rocketonreadystatechange && document.rocketonreadystatechange() } async _triggerWindowLoad() { await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-load")), await this._requestAnimFrame(), window.rocketonload && window.rocketonload(), await this._requestAnimFrame(), this.allJQueries.forEach((e => e(window).trigger("rocket-jquery-load"))), window.dispatchEvent(new Event("rocket-pageshow")), await this._requestAnimFrame(), window.rocketonpageshow && window.rocketonpageshow() } _handleDocumentWrite() { const e = new Map; document.write = document.writeln = function (t) { const n = document.currentScript, r = document.createRange(), i = n.parentElement; let o = e.get(n); void 0 === o && (o = n.nextSibling, e.set(n, o)); const a = document.createDocumentFragment(); r.setStart(a, 0), a.appendChild(r.createContextualFragment(t)), i.insertBefore(a, o) } } async _requestAnimFrame() { return new Promise((e => requestAnimationFrame(e))) } static run() { const e = new RocketLazyLoadScripts(["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"]); e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();</script>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
+
+    <link rel="stylesheet" href="wp-content/themes/garekars/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="wp-content/themes/garekars/css/plugins/owl.carousel.min.css" />
+    <link rel="stylesheet" href="wp-content/themes/garekars/css/plugins/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="wp-content/themes/garekars/css/plugins/animate.min.css" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/themify-iconse7a0.css?ver=1672983975" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/flaticone7a0.css?ver=1672983975" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/magnific-popupe7a0.css?ver=1672983975" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/YouTubePopUpe7a0.css?ver=1672983975" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/select2e7a0.css?ver=1672983975" />
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/plugins/datepickere7a0.css?ver=1672983975" />
+
+    <!-- <link rel="stylesheet" href="https://garekarsmdskinclinic.com/wp-content/themes/garekars/css/plugins.css" /> -->
+
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/css/stylee7a0.css?ver=1672983975" />
+
+    <link data-minify="1" rel="stylesheet"
+        href="wp-content/cache/min/1/wp-content/themes/garekars/custome7a0.css?ver=1672983975" />
+
+    <title>Dr Varun Bansal &#8211;  Best Cardiologist in Delhi</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel="alternate" type="application/rss+xml"
+        title="Dr Varun Bansal &#8211; the Best Cardiologist in Delhi &raquo; Feed" href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml"
+        title="Dr Varun Bansal &#8211; the Best Cardiologist in Delhi &raquo; Comments Feed"
+        href="comments/feed/index.html" />
+    <script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/garekarsmdskinclinic.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='wp-includes/css/dist/block-library/style.min6a4d.css?ver=6.1.1' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='wp-includes/css/classic-themes.min68b3.css?ver=1'
+        media='all' />
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+      
+        
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 48%; /* Adjust width as needed, leaving some space for margin/padding */
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+    </style>
+    <link data-minify="1" rel='stylesheet' id='megamenu-css'
+        href='wp-content/cache/min/1/wp-content/uploads/maxmegamenu/stylee7a0.css?ver=1672983975' media='all' />
+    <link data-minify="1" rel='stylesheet' id='dashicons-css'
+        href='wp-content/cache/min/1/wp-includes/css/dashicons.mine7a0.css?ver=1672983975' media='all' />
+    <link data-minify="1" rel='stylesheet' id='garekars-style-css'
+        href='wp-content/cache/min/1/wp-content/themes/garekars/stylee7a0.css?ver=1672983975' media='all' />
+    <link data-minify="1" rel='stylesheet' id='gform_basic-css'
+        href='wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/basic.mine7a0.css?ver=1672983975'
+        media='all' />
+    <link rel='stylesheet' id='gform_theme_components-css'
+        href='wp-content/plugins/gravityforms/assets/css/dist/theme-components.mina19e.css?ver=2.6.9' media='all' />
+    <link rel='stylesheet' id='gform_theme_ie11-css'
+        href='wp-content/plugins/gravityforms/assets/css/dist/theme-ie11.mina19e.css?ver=2.6.9' media='all' />
+    <link rel='stylesheet' id='gform_theme-css'
+        href='wp-content/plugins/gravityforms/assets/css/dist/theme.mina19e.css?ver=2.6.9' media='all' />
+    <script type="rocketlazyloadscript" src='wp-includes/js/jquery/jquery.mina7a0.js?ver=3.6.1' id='jquery-core-js'
+        defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2'
+        id='jquery-migrate-js' defer></script>
+    <script type="rocketlazyloadscript" defer='defer'
+        src='wp-content/plugins/gravityforms/js/jquery.json.mina19e.js?ver=2.6.9' id='gform_json-js'></script>
+    <script id='gform_gravityforms-js-extra'>
+        var gf_global = { "gf_currency_config": { "name": "U.S. Dollar", "symbol_left": "$", "symbol_right": "", "symbol_padding": "", "thousand_separator": ",", "decimal_separator": ".", "decimals": 2, "code": "USD" }, "base_url": "https:\/\/garekarsmdskinclinic.com\/wp-content\/plugins\/gravityforms", "number_formats": [], "spinnerUrl": "https:\/\/garekarsmdskinclinic.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg", "strings": { "newRowAdded": "New row added.", "rowRemoved": "Row removed", "formSaved": "The form has been saved.  The content contains the link to return and complete the form." } };
+        var gform_i18n = { "datepicker": { "days": { "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu", "friday": "Fri", "saturday": "Sat", "sunday": "Sun" }, "months": { "january": "January", "february": "February", "march": "March", "april": "April", "may": "May", "june": "June", "july": "July", "august": "August", "september": "September", "october": "October", "november": "November", "december": "December" }, "firstDay": 1, "iconText": "Select date" } };
+        var gf_legacy_multi = { "1": "" };
+        var gform_gravityforms = { "strings": { "invalid_file_extension": "This type of file is not allowed. Must be one of the following:", "delete_file": "Delete this file", "in_progress": "in progress", "file_exceeds_limit": "File exceeds size limit", "illegal_extension": "This type of file is not allowed.", "max_reached": "Maximum number of files reached", "unknown_error": "There was a problem while saving the file on the server", "currently_uploading": "Please wait for the uploading to complete", "cancel": "Cancel", "cancel_upload": "Cancel this upload", "cancelled": "Cancelled" }, "vars": { "images_url": "https:\/\/garekarsmdskinclinic.com\/wp-content\/plugins\/gravityforms\/images" } };
+    </script>
+    <script type="rocketlazyloadscript" id='gform_gravityforms-js-before'>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
+</script>
+    <script type="rocketlazyloadscript" defer='defer'
+        src='wp-content/plugins/gravityforms/js/gravityforms.mina19e.js?ver=2.6.9' id='gform_gravityforms-js'></script>
+    <link rel="https://api.w.org/" href="wp-json/index.html" />
+    <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/9.json" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <link rel="canonical" href="index.html" />
+    <link rel='shortlink' href='index.html' />
+    <link rel="alternate" type="application/json+oembed"
+        href="wp-json/oembed/1.0/embede151.json?url=https%3A%2F%2Fgarekarsmdskinclinic.com%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="wp-json/oembed/1.0/embedbbde?url=https%3A%2F%2Fgarekarsmdskinclinic.com%2F&amp;format=xml" />
+    <style type="text/css">
+        .broken_link,
+        a.broken_link {
+            text-decoration: line-through;
+        }
+    </style>
+    <style type="text/css">
+        .site-title,
+        .site-description {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+    </style>
+    <link rel="icon" href="wp-content/uploads/2022/12/favicon.png" sizes="32x32" />
+    <link rel="icon" href="wp-content/uploads/2022/12/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="wp-content/uploads/2022/12/favicon.png" />
+    <meta name="msapplication-TileImage"
+        content="https://garekarsmdskinclinic.com/wp-content/uploads/2022/12/favicon.png" />
+    <style type="text/css">
+        /** Mega Menu CSS: fs **/
+    </style>
+
+</head>
+
+<body
+    class="home page-template page-template-template-home page-template-template-home-php page page-id-9 wp-custom-logo mega-menu-main no-sidebar">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+
+
+
+    <!-- Preloader -->
+
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+           
+            <!-- Navbar links -->
+
+
+
+        </div>
+    </nav>
+    <!-- Slider -->
+    <header class="header slider-fade">
+        <div class="owl-carousel owl-theme">
+            <!--The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9.-->
+           
+            <div class="text-center item bg-img" data-overlay-dark="5"
+                data-background="wp-content/uploads/2022/11/banner1.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <span>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                    <i class="star-rating"></i>
+                                </span>
+
+                                <h1>Dr Varun Bansal</h1>
+                                <h4> MBBS , DNB (Cardiothoracic Surgery), FACS ( Fellowship Advanced Cardiac Surgery), University Of Toronto </h4>
+                                <h4> Heart Surgeon, Cardio Thoracic & Vascular </h4>
+                                <h3> Your Cardiac Care Specialist, mending every missed heartbeat with expertise and compassion. </h3>
+                                <div class="butn-light mt-30 mb-30"> <a href="tel:9899261481"><span>Get
+                                            Appointment</span></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- slider reservation -->
+        <div class="reservation">
+            <a href="tel:9899261481">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <i class="flaticon-call"></i>
+                </div>
+                <div class="call"><span>9899261481</span> <br>Get Appointment</div>
+            </a>
+        </div>
+    </header>
+    <!-- Booking Search -->
+    <div class="booking-wrapper">
+        <div class="container">
+            <button type="submit" class="btn-form1-submit"> <a href="tel:9899261481">Call Now</a>
+            </button>
+        </div>
+    </div>
+
+    <main id="primary1" class="site-main1">
+
+
+
+        <div class="entry-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- About -->
+            
+            <section class="about section-padding">
+                <div class="container">
+                    <div class="row">
+                       
+                        <div class="col col-md-5 animate-box" data-animate-effect="fadeInUp">
+                            <p class="home-mam-profile"><span>DR VARUN BANSAL </span><span> <span>(Indraprastha Apollo Hospital, New Delhi)</span>  </span></p>
+                            <img decoding="async" src="img/site/Dr-varun.png"
+                                alt="" class="mtz-90 mb-30">
+                        </div>
+                        
+                        <div class="col-md-6 animate-box" data-animate-effect="fadeInUp">
+                            <span>
+                                <i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
+                                    class="star-rating"></i><i class="star-rating"></i>
+                            </span>
+                            <div class="section-subtitle">MEET THE EXPERT</div>
+                            <div class="section-title">About Us</div>
+                            <p>Dr. Varun Bansal is a highly accomplished medical professional specializing in cardiovascular care. Possessing an MBBS degree, DNB (Cardiothoracic Surgery), and FACS (Fellowship Advanced Cardiac Surgery) from the prestigious University of Toronto, he currently serves as a leading Cardiologist and Cardiac Surgeon at Indraprastha Apollo Hospitals in Delhi.
+                                With over 12 years of dedicated experience, Dr. Varun Bansal has established himself as a distinguished Heart Health Specialist. His expertise encompasses a wide range of advanced techniques, including Robotic and Minimally Invasive Heart surgeries, Heart Transplants, LVADs, ECMO, and TAVI, in addition to routine and complex cardiac surgeries.
+                                A member of renowned organizations such as ASCVTS, IACTS, SMICTSI, and IMA, Dr. Varun Bansal demonstrates a commitment to staying abreast of the latest developments in cardiovascular care.
+                                Recognized for his dedication, compassion, and unwavering commitment to patient well-being, Dr. Varun Bansal is acknowledged as the Best Cardiologist in Delhi. Entrust your heart health to the care of this seasoned professional, who combines skill, experience, and genuine passion for healing.
+
+
+
+
+
+ </p>
+
+                            
+                            
+
+                        </div>
+                       
+
+                        
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="news home-ig-section">
+                <div class="background bg-img bg-fixed section-padding"
+                    data-background="wp-"
+                    data-overlay-dark="3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="section-title" style="color: white;">
+Understanding Robotic Cardiac Surgery and its Components</div>
+                                <p>Robotic cardiac surgery is a cutting-edge advancement in the field of cardiovascular medicine, employing state-of-the-art robotic systems to perform intricate cardiac procedures with precision. The primary components of a robotic system used in cardiac surgery include a console, robotic arms, and specialized instruments. The console allows the surgeon to control the robotic arms, which are equipped with miniaturized instruments that can navigate through smaller incisions compared to traditional surgery. . </p>
+
+                                <p>This minimally invasive approach results in reduced pain, shorter recovery times, and enhanced precision, making robotic cardiac surgery a transformative option for patients requiring various heart procedures.
+
+
+
+
+
+
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <iframe width="310" height="300" src="https://www.youtube.com/embed/NcSy4n-0ChY" title="What is Robotic Cardiac Surgery? What are parts of Robotic System?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rooms -->
+            <section class="rooms1 section-padding bg-cream" data-scroll-index="1" id="explore-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <div class="section-title">Know More </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="position-re o-hidden"> <iframe width="550" height="300" src="https://www.youtube.com/embed/ReWGkbsOXDY" title="Robotic cardiac surgery Q &amp; A and FAQs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+                                <div class="con">
+                                    <h6><a href="tel:9899261481">Call Now</a></h6>
+
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="position-re o-hidden"> <iframe width="550" height="300" src="https://www.youtube.com/embed/30uvxlq8AVA" title="how pollution affects our heart and how to save ourselves from heart diseases" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+                                <div class="con">
+                                    <h6><a href="tel:9899261481">Call Now</a></h6>
+
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="position-re o-hidden"> <iframe width="550" height="300" src="https://www.youtube.com/embed/RC88LDzO1Ck" title="Cost of Robotic Cardiac Surgery in India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+                                <div class="con">
+                                    <h6><a href="tel:9899261481">Call Now</a></h6>
+
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="position-re o-hidden"> <iframe width="550" height="300" src="https://www.youtube.com/embed/NcSy4n-0ChY" title="What is Robotic Cardiac Surgery? What are parts of Robotic System?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+                                <div class="con">
+                                    <h6><a href="tel:9899261481">Call Now</a></h6>
+
+                                    <div class="line"></div>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+          
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-a49ca98f-773d-41a3-846e-d569aebf42f6" data-elfsight-app-lazy></div>
+
+
+
+           
+            <!-- Pricing -->
+
+            <!-- Promo Video -->
+            <section class="background  section-padding bg-img bg-fixed" data-overlay-dark="3"
+                data-background="img/home-store-section.jpg">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- <span><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span> -->
+                            <!-- <div class="section-subtitle"><span>Avana Healthcare</span></div> -->
+                            <div class="section-title"><span>
+                                    <h2>Advanced Technologies for Heart Health?</h2>
+                                </span></div>
+                            <p><span style="color: #ffffff;"Advanced technologies have revolutionized the landscape of heart health, offering innovative solutions for diagnosis, treatment, and monitoring. From cutting-edge imaging techniques such as 3D echocardiography and cardiac MRI to sophisticated minimally invasive procedures aided by robotic-assisted surgery, these technologies enhance precision and reduce recovery times. </span></p>
+                            <p><span style="color: #ffffff;">Wearable devices and mobile health applications provide real-time monitoring, empowering individuals to actively manage their heart health. Additionally, advancements in artificial intelligence contribute to more accurate risk assessments and personalized treatment plans. As technology continues to evolve, it plays a pivotal role in shaping the future of cardiovascular care, fostering early detection, proactive intervention, and improved outcomes for heart-related conditions.</span></p>
+
+
+                           
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text-center col-md-12">
+                            <a class="vid" href="https://www.youtube.com/shorts/TagSoiXSNug?feature=share">
+                                <div class="vid-butn">
+                                    <span class="icon"><i class="ti-control-play"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Facilties -->
+            
+
+            <!-- News -->
+
+            <!-- Services -->
+
+            <!-- News -->
+
+            <section class="facilties section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-subtitle">Our Services</div>
+                            <div class="section-title">Tailored cardiology services focused on your heart health. Experience personalized care with advanced techniques for your unique needs.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Robotic Cardiac Surgery</a></h5>
+                                <p>
+                                    Robotic cardiac surgery represents a cutting-edge advancement in the field of cardiovascular medicine. This minimally invasive approach utilizes robotic systems to perform intricate cardiac procedures with unparalleled precision. </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Minimally Invasive Cardiac Surgery</a></h5>
+                                <p>
+                                    Minimally Invasive Cardiac Surgery (MICS) has revolutionized traditional approaches to heart procedures. In MICS, surgeons employ specialized techniques and instruments to perform surgeries through small incisions, often avoiding the need for a large chest opening.  </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Complex cardiac surgery</a></h5>
+                                <p>
+                                    "Complex cardiac surgery involves intricate procedures designed to address intricate heart conditions. These surgeries are often necessary for complex cases, such as advanced heart valve disorders, congenital anomalies, or intricate coronary artery diseases.   </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Total arterial CABG</a></h5>
+                                <p>
+                                    Total Arterial Coronary Artery Bypass Grafting (CABG) is an advanced surgical technique used to address coronary artery disease. In this procedure, surgeons exclusively use arterial grafts, typically the internal mammary arteries, instead of veins, to bypass blocked coronary arteries.  </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Mitral valve repair surgery</a></h5>
+                                <p>
+                                    Mitral valve repair surgery is a specialized procedure aimed at correcting issues with the mitral valve, one of the heart's crucial valves. Rather than replacing the valve, surgeons focus on preserving and restoring its function.  </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Heart valve replacement surgery</a></h5>
+                                <p>
+                                    Heart valve replacement surgery is a medical procedure performed to address damaged or diseased heart valves. During this surgery, the damaged valve is replaced with either a mechanical or biological prosthetic valve.  </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Heart transplant and LVADs</a></h5>
+                                <p>
+                                    Heart transplantation and Left Ventricular Assist Devices (LVADs) represent advanced therapies for severe heart failure. In a heart transplant, a diseased heart is replaced with a healthy donor heart, offering a potential cure for end-stage heart failure. On the other hand, LVADs are mechanical devices implanted to assist the weakened heart in pumping blood.  </p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-world"><img decoding="async" src="tel:9899802288" /></span> -->
+                               
+                                <h5><a href="tel:9899802288">Heart transplant</a></h5>
+                                <p>
+A heart transplant is a life-saving surgical procedure in which a diseased or failing heart is replaced with a healthy donor heart. This intricate medical intervention is typically reserved for individuals with severe heart conditions that cannot be effectively treated through other means.</p>
+                                <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-car"><img decoding="async" src="tel:9899802288" /></span> -->
+                                <h5><a href="tel:9899802288">TAVI</a></h5>
+                                <p>Transcatheter Aortic Valve Implantation (TAVI), also known as Transcatheter Aortic Valve Replacement (TAVR), is a revolutionary minimally invasive procedure for treating aortic valve stenosis. 
+                                </p>
+                                <div class="facility-shape"> <span class="flaticon-car"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-bed"><img decoding="async" src="tel:9899802288" /></span> -->
+                                <h5><a href="tel:9899802288">Double valve replacements </a></h5>
+                                <p>Double valve replacement is a complex cardiac surgical procedure where both the aortic and mitral valves in the heart are replaced with artificial valves. This surgery is typically performed to address severe damage or disease affecting both valves simultaneously.</p>
+                                <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                            </div>
+                        </div> <br>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-bed"><img decoding="async" src="tel:9899802288" /></span> -->
+                                <h5><a href="tel:9899802288">Redo – MVR </a></h5>
+                                <p>A Redo Mitral Valve Replacement (MVR) is a surgical procedure performed when a previously implanted mitral valve needs to be replaced again. This may be necessary due to wear and tear of the existing artificial valve, valve dysfunction, or other complications that have arisen since the initial surgery. </p>
+                                <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                                <!-- <span class="flaticon-bed"><img decoding="async" src="tel:9899802288" /></span> -->
+                                <h5><a href="tel:9899802288">Pneumonectomy</a></h5>
+                                <p>
+Pneumonectomy is a surgical procedure involving the removal of an entire lung. Typically performed to treat severe lung diseases, lung cancer, or traumatic injuries, pneumonectomy aims to eliminate the affected lung tissue and improve overall respiratory function. </p>
+                                <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Call us & Booking Form -->
+            <section class="testimonials">
+                <div class="background bg-img bg-fixed section-padding" data-background="img/home-store-section.jpg"
+                    data-overlay-dark="2">
+                    <div class="container ">
+                        <div class="row">
+                            <!-- Call us -->
+                            <div class="col-md-6">
+                                <!-- <div class="row">
+                    <div class="col-md-6" style="background: #aa845380;padding-top: 60px; color: #fff;text-align: center;">
+                        
+                        <div class="reservations mt-30" style="display: block;">
+                            <div class="text" style="margin: 0;">
+                                <p class="color-1">Get appointment</p> <a class="color-1" href="tel:9899261481 ">9899261481 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 " style="padding:0 ;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.283858389266!2d77.2698466!3d28.561237699999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3936669ebf1%3A0x236e59a7ce81d981!2sAvana%3A%20Dentistry!5e0!3m2!1sen!2sin!4v1681976987586!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 " style="padding:0 ;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.283858389266!2d77.2698466!3d28.561237699999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3936669ebf1%3A0x236e59a7ce81d981!2sAvana%3A%20Dentistry!5e0!3m2!1sen!2sin!4v1681976987586!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-md-6" style="background: #aa845380; color:#fff; padding-top: 60px; text-align: center;">
+                        
+
+                        <div class="reservations mt-30" style="display: block;">
+                            <div class="text" style="margin:0;">
+                                <p class="color-1">Get appointment</p> <a class="color-1" href="tel:9599491986 ">9599491986 </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112238.86427090198!2d77.21476618650493!3d28.465554522166933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30eba98222b%3A0xda325d9b86d66400!2sDr%20Varun%20Bansal%20%7C%20Best%20Cardiologist%20in%20Delhi%2C%20Heart%20Specialist%20in%20Delhi!5e0!3m2!1sen!2sin!4v1706607557025!5m2!1sen!2sin" width="360" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <br>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28081.819253443446!2d77.2932760379768!3d28.38219870131921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3d46cdbcea3%3A0x89f375f96818de24!2sDr%20Varun%20Bansal!5e0!3m2!1sen!2sin!4v1706607398330!5m2!1sen!2sin" width="360" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+
+                            <!-- Booking From -->
+                            <div class="col-md-6">
+                                <h1 style="color: #ffffff;">Submit Form</h1>
+                                <form onsubmit="return false;">
+                                    <label for="name" style="color: #ffffff;">Name:</label>
+                                    <input type="text" id="name" required style="color: #ffffff;"><br><br>
+                                    <label for="email" style="color: #ffffff;">Email:</label>
+                                    <input type="email" id="email" required style="color: #ffffff;"><br><br>
+                                    <label for="message" style="color: #ffffff;">Message:</label>
+                                    <textarea id="message" required style="color: #ffffff;"></textarea><br><br>
+                                    <button onclick="submitForm()" style="color: #ffffff;">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Clients -->
+        </div><!-- .entry-content -->
+    </main><!-- #main -->
+
+    <a href="https://wa.me/9899261481" target="_blank" rel="noopener">
+        <img src="/whatsap.png" alt="WhatsApp"
+            style="position: fixed; bottom: 80px; right: 20px; width: 50px; height: 50px; z-index: 100;"></a>
+
+
+
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-3131102e-3802-4fd4-8714-fcf4efb4c685" data-elfsight-app-lazy></div>
+
+
+
+   
+
+<script>
+    const fileInput1 = document.getElementById('fileInput1');
+    const fileInput2 = document.getElementById('fileInput2');
+    
+    fileInput1.addEventListener('change', function () {
+        const video1 = document.querySelector('.video-wrapper video:nth-child(1)');
+        const file = fileInput1.files[0];
+        video1.src = URL.createObjectURL(file);
+    });
+
+    fileInput2.addEventListener('change', function () {
+        const video2 = document.querySelector('.video-wrapper video:nth-child(2)');
+        const file = fileInput2.files[0];
+        video2.src = URL.createObjectURL(file);
+    });
+</script>
+
+
+    <script type="rocketlazyloadscript" src='wp-content/themes/garekars/js/navigation8a54.html?ver=1.0.0'
+        id='garekars-navigation-js' defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9'
+        id='regenerator-runtime-js' defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0'
+        id='wp-polyfill-js'></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/dom-ready.minded6.js?ver=392bdd43726760d1f3ca'
+        id='wp-dom-ready-js' defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/hooks.min6c65.js?ver=4169d3cf8e8d95a3d6d5'
+        id='wp-hooks-js'></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/i18n.mine57b.js?ver=9e794f35a71bb98672ae'
+        id='wp-i18n-js'></script>
+    <script type="rocketlazyloadscript" id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/dist/a11y.min65c7.js?ver=ecce20f002eda4c19664'
+        id='wp-a11y-js' defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2' id='jquery-ui-core-js'
+        defer></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/jquery/ui/datepicker.min3f14.js?ver=1.13.2'
+        id='jquery-ui-datepicker-js' defer></script>
+    <script type="rocketlazyloadscript" id='jquery-ui-datepicker-js-after'>window.addEventListener('DOMContentLoaded', function() {
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+});</script>
+    <script type="rocketlazyloadscript" defer='defer'
+        src='wp-content/plugins/gravityforms/js/datepicker-legacy.mina19e.js?ver=2.6.9'
+        id='gform_datepicker_legacy-js'></script>
+    <script type="rocketlazyloadscript" defer='defer'
+        src='wp-content/plugins/gravityforms/js/datepicker.mina19e.js?ver=2.6.9' id='gform_datepicker_init-js'></script>
+    <script type="rocketlazyloadscript" src='wp-includes/js/hoverIntent.min3e5a.js?ver=1.10.2' id='hoverIntent-js'
+        defer></script>
+    <script id='megamenu-js-extra'>
+        var megamenu = { "timeout": "300", "interval": "100" };
+    </script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src='wp-content/cache/min/1/wp-content/plugins/megamenu/js/maxmegamenue7a0.js?ver=1672983975' id='megamenu-js'
+        defer></script>
+    
+
+
+
+    <!-- jQuery -->
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/jquery-3.6.0.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/jquery-migrate-3.0.0.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/modernizr-2.6.2.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/imagesloaded.pkgd.min.js" defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/jquery.isotope.v3.0.2e7a0.js?ver=1672983975"
+        defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/pacee7a0.js?ver=1672983975" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/popper.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/bootstrap.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/scrollIt.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/jquery.waypoints.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/owl.carousel.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/jquery.stellar.min.js" defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/jquery.magnific-popupe7a0.js?ver=1672983975"
+        defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/YouTubePopUpe7a0.js?ver=1672983975" defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/select2e7a0.js?ver=1672983975" defer></script>
+    <script type="rocketlazyloadscript" data-minify="1"
+        src="wp-content/cache/min/1/wp-content/themes/garekars/js/datepickere7a0.js?ver=1672983975" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/smooth-scroll.min.js" defer></script>
+    <script type="rocketlazyloadscript" src="wp-content/themes/garekars/js/custom-min.js" defer></script>
+
+    <script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+	jQuery('p').each(function() {
+	    const $this = jQuery(this);
+	    if($this.html().replace(/\s|&nbsp;/g, '').length === 0)
+	        $this.remove();
+	});
+});</script>
+    
+</body>
+
+</html>
